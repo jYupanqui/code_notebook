@@ -31,3 +31,27 @@ Only one valid answer exists.
 
 Follow-up: Can you come up with an algorithm that is less than O(n2) time complexity?
 """
+
+
+def two_sum(nums: list[int], target: int) -> list[int]:
+    h = {}
+    res = []
+    for i, num in enumerate(nums):
+        n = target - num
+
+        if n not in h:
+            h[num] = i
+        else:
+            res = [h[n], i]
+            print(f"Solution found {res}")
+            break
+    if not res:
+        print(f"No two sum found!")
+    return res
+
+
+# TEST
+
+n = [2, 7, 11, 15]
+t = 9
+two_sum(n, t)
