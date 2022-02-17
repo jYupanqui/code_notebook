@@ -1,7 +1,10 @@
 #BIG O 
 - how well a solution solves a problem
-####Good code:
- - Scalable 
+- https://www.bigocheatsheet.com/
+####Good code ( 3 Pillars of code):
+ - Scalable  
+   - Speed(Time complexity)
+   - Memory (Space Complexity)
  - Readable
 
 
@@ -96,3 +99,4 @@ for i, item in enumerate(box):
 
 
 ```
+
