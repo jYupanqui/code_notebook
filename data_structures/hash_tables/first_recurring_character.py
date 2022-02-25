@@ -12,7 +12,7 @@ Example:
 """
 
 
-def first_recurring_character(nums):
+def first_recurring_character(nums): # o(n)
     bucket = {}
     for i, n in enumerate(nums):
         if n not in bucket:

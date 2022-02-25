@@ -10,6 +10,14 @@ Hash Collisions:
     - When collisions appear the lookup performance goes to O(n)
     - Hash tables can assign the same memory space to different entries.
 
+Pro:
+    - Fast lookups (Good collision resolution needed)
+    - Fast inserts
+    - Flexible keys
+Cons:
+    - Unordered (python dicts are ordered from 3.7)
+    - Slow key iteration
+
 """
 
 
