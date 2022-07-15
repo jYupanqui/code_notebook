@@ -24,17 +24,14 @@ Constraints:
 """
 
 
-def containsDuplicate(nums: list[int]) -> bool:
+def contains_duplicate(nums: list[int]) -> bool:
     length_list = len(nums)
     length_set = len(set(nums))
-    res = False
-    if length_list != length_set:
-        res = True
-    return res
+    return length_list != length_set
 
 
 # TEST
 
 n = [1, 1, 1, 3, 3, 4, 3, 2, 4, 2]
 
-containsDuplicate(n)
+print(contains_duplicate(n))
