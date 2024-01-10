@@ -24,13 +24,23 @@ Follow up: Your algorithm's time complexity must be better than O(n log n), wher
 
 def top_k_frequent(nums: list[int], k: int) -> list[int]:
     map = {}
+    feq = [[] for i in range(len(nums) + 1)]
 
     for n in nums:
         map[n] = 1 + map.get(n, 0)
 
+    for n, c in map.items():
+        feq[c].append(n)
+
+    res = []
+    for i in range(len(feq) - 1, 0, -1):
+        for n in feq[i]:
+            res.append(n)
+            if len(res) == k:
+                return res
 
 
-test = [1, 1, 1, 2, 2, 3]
+test = [1, 1, 1, 2, 2, 3, 3, 3, 3, 3]
 test_k = 2
 
 top_k_frequent(test, test_k)
