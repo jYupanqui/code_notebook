@@ -42,6 +42,31 @@ from typing import List
 #
 #     return res
 
+
+
+# Brute force
+# def product_except_self(nums: list[int]) -> list[int]:
+#     """
+#     This solution works but is O(n^2)
+#     :param nums:
+#     :return:
+#     """
+#     pos = 0
+#     answer = []
+#
+#     while pos < len(nums):
+#         prod = 1
+#         for i, v in enumerate(nums):
+#             if i != pos:
+#                 prod *= v
+#
+#         answer.append(prod)
+#         pos += 1
+#
+#     return answer
+
+
+
 def product_except_self(nums: List[int]) -> List[float]:
     res = [1] * (len(nums))
 
