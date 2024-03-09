@@ -39,7 +39,7 @@ strs[i] consists of lowercase English letters.
 """
 from collections import defaultdict
 
-
+# O(m*n)
 def group_anagrams(strs: list[str]) -> list[list[str]]:
     res = defaultdict(list)  # mapping charCount to list of Anagrams , time complexity 0(m * n)
     for s in strs:

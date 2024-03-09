@@ -51,7 +51,10 @@ def two_sum(nums: list[int], target: int) -> list[int]:
 
 
 # TEST
-
+"""
+TC = O(n)
+SC = O(n)
+"""
 n = [2, 7, 11, 15]
 t = 9
 two_sum(n, t)

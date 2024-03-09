@@ -94,30 +94,43 @@ Auxiliary Space: O(1)
 """
 
 
+# def is_anagram(s: str, t: str) -> bool:
+#     s_list = list(s)
+#     t_list = list(t)
+#
+#     ret = False
+#
+#     if len(s_list) == len(t_list):
+#
+#         for char in s_list:
+#
+#             if char in t_list:
+#                 for i, t_char in enumerate(t_list):
+#                     if char == t_char:
+#                         t_list.pop(i)
+#                         break
+#             else:
+#                 break
+#
+#         if len(t_list) == 0:
+#             ret = True
+#
+#     return ret
 def is_anagram(s: str, t: str) -> bool:
-    s_list = list(s)
-    t_list = list(t)
+    if len(s) != len(t):
+        return False
 
-    ret = False
-
-    if len(s_list) == len(t_list):
-
-        for char in s_list:
-
-            if char in t_list:
-                for i, t_char in enumerate(t_list):
-                    if char == t_char:
-                        t_list.pop(i)
-                        break
-            else:
-                break
-
-        if len(t_list) == 0:
-            ret = True
-
-    return ret
-
+    countS, countT = {}, {}
+    for i in range(len(s)):
+        countS[s[i]] = 1 + countS.get(s[i], 0)
+        countT[t[i]] = 1 + countS.get(t[i], 0)
+    for c in countS:
+        if countS[c] != countT.get(c, 0):
+            return False
+    return True
 
 print(is_anagram("anagram", "nagaram"))
 print(is_anagram("rat", "car"))
 print(is_anagram("ab", "a"))
+
+#note: We can use Counter or sorting as well

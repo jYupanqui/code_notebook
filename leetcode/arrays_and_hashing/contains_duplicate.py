@@ -30,6 +30,15 @@ def contains_duplicate(nums: list[int]) -> bool:
     return length_list != length_set
 
 
+def contains_duplicate2(nums: list[int]) -> bool:
+    hashset = set()
+    for n in nums:
+        if n in hashset:
+            return True
+        hashset.add(n)
+    return False
+
+
 # TEST
 
 n = [1, 1, 1, 3, 3, 4, 3, 2, 4, 2]
