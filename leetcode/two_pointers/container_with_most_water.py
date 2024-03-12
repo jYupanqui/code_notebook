@@ -35,6 +35,11 @@ from typing import List
 # O(N) linear solution
 
 def max_area(height: List[int]) -> int:
+    """
+    O(n)
+    :param height:
+    :return:
+    """
     area: int = 0
     l, r = 0, len(height) - 1
 

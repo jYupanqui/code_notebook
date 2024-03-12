@@ -25,5 +25,33 @@ Constraints:
 1 <= prices.length <= 105
 0 <= prices[i] <= 104
 """
+from typing import List
 
 
+def max_profit(prices: List[int]) -> int:
+    """
+
+    :param self:
+    :param prices:
+    :return:
+    """
+
+    l, r = 0, 1  # left-buy right-sale
+
+    max_earnings = 0
+    while r < len(prices):
+        if prices[l] < prices[r]:
+            profit = prices[r] - prices[l]
+            max_earnings = max(profit, max_earnings)
+        else:
+            l = r
+        r += 1
+
+    return max_earnings
+
+
+
+
+price = [1, 2, 4, 2, 5, 7, 2, 4, 9, 0, 9]
+
+print(max_profit(price))
