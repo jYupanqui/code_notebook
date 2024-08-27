@@ -8,5 +8,5 @@ bin/*
 .kitchen/
 .kitchen.local.yml
 
-
+.venv/*
 .idea/*
